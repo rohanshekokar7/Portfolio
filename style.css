@@ -1,0 +1,93 @@
+/* Set the default font for the entire page */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Custom cursor as requested */
+    cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/801b-arrow.png'), auto;
+    background-color: #000; /* Set a base background color */
+}
+
+/* Style for the active navigation link */
+.nav-link.active {
+    color: #22c55e; /* green-500 */
+    font-weight: 600;
+}
+
+/* Base styles for theme-aware cards */
+.theme-card {
+    background-color: #f3f4f6; /* gray-100 */
+    border: 1px solid #e5e7eb; /* gray-200 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .theme-card {
+    background-color: #1f2937; /* gray-800 */
+    border: 1px solid #4b5563; /* gray-600 */
+}
+.theme-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.dark .theme-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Effect for skill icons on card hover */
+.theme-card .skill-icon {
+    transition: transform 0.3s ease-in-out;
+}
+.theme-card:hover .skill-icon {
+    transform: scale(1.15) rotate(-10deg);
+}
+
+/* Base styles for theme-aware buttons */
+.theme-button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.theme-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+/* Glow effect for social media icons on hover */
+.glow-icon {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.glow-icon:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 15px #22c55e;
+}
+
+/* 3D Perspective for the project grid container */
+.project-grid-perspective {
+    perspective: 1000px;
+}
+
+/* 3D tilt effect for project cards on hover */
+.project-card-3d {
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.project-card-3d:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+}
+
+/* Preloader Styles */
+#preloader {
+    transition: opacity 0.5s ease-in-out;
+}
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #22c55e; /* Green */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+.dark .loader {
+    border-color: #374151; /* dark:gray-700 */
+    border-top-color: #22c55e; /* dark:green-500 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
